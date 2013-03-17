@@ -1,0 +1,21 @@
+.selection,
+.multiple_choice_selection
+{
+    border: solid 1px #CCC;
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    width: 200px;
+}
+
+.options,
+.multiple_choice
+{
+    background: #FFF;
+    border: solid 1px #CCC;
+    display: none;
+    left: 0;
+    position: relative;
+    top: 30px;
+    z-index: 10;
+}
