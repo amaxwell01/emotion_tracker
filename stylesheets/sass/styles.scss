@@ -1,3 +1,30 @@
+@import 'snippets';
+
+#DialogWrapper {
+    background: rgba(0, 0, 0, .7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+}
+
+.customDialog {
+    background: #FEFEFE;
+    border-radius: 10px;
+    box-shadow: 0 0 14px 5px rgba(0, 0, 0, .5);
+    height: 95%;
+    width: 95%;
+    z-index: 300;
+}
+
+
+
+.emotion_tracker {
+    width: 100%;
+}
+
 .selection,
 .multiple_choice_selection
 {
@@ -5,7 +32,7 @@
     cursor: pointer;
     height: 30px;
     position: relative;
-    width: 200px;
+    width: 100%;
 }
 
 .options,
@@ -18,4 +45,8 @@
     position: relative;
     top: 30px;
     z-index: 10;
+}
+
+.message {
+    width: 100%;
 }

@@ -3,23 +3,25 @@
     <title>Emotional Tracker</title>
     <link href="stylesheets/css/styles.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/drydialogs.js"></script>
     <script src="js/scripts.js"></script>
 </head>
 <body>
-<section>
+<section class="emotion_tracker">
     <div id="stress_slider"></div>
 
     <label for="sources">Sources of Stress</label>
     <div class="multiple_choice_selection" data-type="source">
         <div class="selected_item"></div>
-        <ul name="sources" class="sources multiple_choice">
-            <li class="selected">Work stress</li>
-            <li>personal stress</li>
-            <li>family stress</li>
-            <li>financial stress</li>
-            <li>social stress</li>
-            <li>environmental stress</li>
-            <li>Add New Source of Stress</li>
+        <ul class="multiple_choice">
+            <li>Muscular</li>
+            <li>GI and GenitoUrinary</li>
+            <li>Emotional</li>
+            <li>Cardiovacular and Lung</li>
+            <li>Cognitive</li>
+            <li>Hormonal</li>
+            <li>Immune System</li>
+            <li>Add new stress symptom</li>
         </ul>
     </div>
 
@@ -57,7 +59,7 @@
 
     <label for="people">Number of People Around</label>
     <div id="people_slider"></div>
-    <div class="selection">
+    <div class="selection" data-type="people">
         <div class="selected_item"></div>
         <ul name="people" class="options">
             <li data-count="0">No one</li>
@@ -101,8 +103,8 @@
         </ul>
     </div>
 
-
-    <textarea data-type="message"></textarea>
+    <label>Message</label>
+    <textarea class="message" data-type="message"></textarea>
 
     <button type="button" id="saveEmotion">Save</button>
 </section>
