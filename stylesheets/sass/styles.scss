@@ -1,5 +1,13 @@
 @import 'snippets';
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Droid Sans', sans-serif;
+}
+
 #DialogWrapper {
     background: rgba(0, 0, 0, .7);
     height: 100%;
@@ -12,17 +20,35 @@
 
 .customDialog {
     background: #FEFEFE;
-    border-radius: 10px;
     box-shadow: 0 0 14px 5px rgba(0, 0, 0, .5);
-    height: 95%;
+    height: 97%;
+    padding: 0 10px;
     width: 95%;
     z-index: 300;
+
+    h2 {
+        margin: 30px auto;
+        text-align: center;
+    }
+}
+
+#customDialogClose {
+    cursor: pointer;
+    height: 20px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 20px;
 }
 
 
 
 .emotion_tracker {
     width: 100%;
+
+    @include breakpoint(small) {
+        width: 100%;
+    }
 }
 
 .selection,
@@ -40,13 +66,17 @@
 {
     background: #FFF;
     border: solid 1px #CCC;
-    display: none;
-    left: 0;
-    position: relative;
-    top: 30px;
     z-index: 10;
 }
 
 .message {
     width: 100%;
+}
+
+#saveEmotion,
+.customDialogButton
+{
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 30px;
 }

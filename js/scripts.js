@@ -10,7 +10,7 @@ var emotion = {
     },
 
     content: {
-        typesOfStress: [
+        source: [
             'Work Stress',
             'Personal Stress',
             'Family Stress',
@@ -19,7 +19,7 @@ var emotion = {
             'Environmental Stress'
         ],
 
-        stressSymptoms: [
+        symptoms: [
             'Muscular',
             'GI and GenitoUrinary',
             'Emotional',
@@ -29,7 +29,7 @@ var emotion = {
             'Immune System'
         ],
 
-        lifestyleCondition: [
+        lifestyle: [
             'I didn\'t eat well',
             'I\'m tired',
             'I\'m lonely',
@@ -40,6 +40,14 @@ var emotion = {
             'I ate too much',
             'I drank too much coffee',
             'Add new lifestyle condition'
+        ],
+
+        people: [
+            'No one',
+            '1',
+            '2-5',
+            '6-10',
+            '11 or more'
         ],
 
         mood: [
@@ -93,21 +101,32 @@ var emotion = {
             var target = $(event.target);
             var type = target.attr('data-type');
 
-            dialog.createDialog({
-                title : 'Types of Stress',
-                htmlBody : '<p>Hello World!</p>',
-                buttons  : [
-                    {
-                        value    : 'Ok',
-                        callback : function()
-                        {
-                            alert('You just pressed Ok');
-                        }
-                    }
-                ]
+            // Show Dialog
+            emotion.sourcesOfStressDialog( type );
+        });
+    },
+
+    sourcesOfStressDialog: function( type ) {
+
+        var body = '<ul class="multiple_choice">';
+
+            $.each(emotion.content[type], function(key, value) {
+                body += '<li>' + value + '</li>';
             });
 
-            target.find('.options').toggle();
+            body += '</ul>';
+
+        dialog.createDialog({
+            title : 'Types of Stress',
+            htmlBody : body,
+            buttons  : [
+                {
+                    value    : 'Ok',
+                    callback : function() {
+                        dialog.closeDialog();
+                    }
+                }
+            ]
         });
     },
 
@@ -133,22 +152,10 @@ var emotion = {
     multipleChoiceDropdown: function() {
         $('.multiple_choice_selection').on('click', function(event) {
             var target = $(event.target);
+            var type = target.attr('data-type');
 
-            dialog.createDialog({
-                title : 'Types of Stress',
-                htmlBody : '<p>Hello World!</p>',
-                buttons  : [
-                    {
-                        value    : 'Ok',
-                        callback : function()
-                        {
-                            alert('You just pressed Ok');
-                        }
-                    }
-                ]
-            });
-            
-            target.find('.multiple_choice').toggle();
+            // Show Dialog
+            emotion.sourcesOfStressDialog( type );
 
             target.find('.selected_item').text( emotion.moods );
         });
@@ -168,7 +175,6 @@ var emotion = {
             if (typeof(option) === 'undefined') {
                 option = target.text();
             }
-
 
             that.checkData( type, option );
             selectionContainer.find('.selected_item').text( that.data[type].join(' ') );

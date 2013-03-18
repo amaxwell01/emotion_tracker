@@ -1,6 +1,8 @@
 <html>
 <head>
     <title>Emotional Tracker</title>
+    <meta name="viewport" content="width=device-width">
+    
     <link href="stylesheets/css/styles.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/drydialogs.js"></script>
@@ -13,94 +15,27 @@
     <label for="sources">Sources of Stress</label>
     <div class="multiple_choice_selection" data-type="source">
         <div class="selected_item"></div>
-        <ul class="multiple_choice">
-            <li>Muscular</li>
-            <li>GI and GenitoUrinary</li>
-            <li>Emotional</li>
-            <li>Cardiovacular and Lung</li>
-            <li>Cognitive</li>
-            <li>Hormonal</li>
-            <li>Immune System</li>
-            <li>Add new stress symptom</li>
-        </ul>
     </div>
 
     <label for="symptoms">Stress Symptons</label>
     <div class="multiple_choice_selection" data-type="symptoms">
         <div class="selected_item"></div>
-        <ul name="symptoms" class="multiple_choice">
-            <li>Muscular</li>
-            <li>GI and GenitoUrinary</li>
-            <li>Emotional</li>
-            <li>Cardiovacular and Lung</li>
-            <li>Cognitive</li>
-            <li>Hormonal</li>
-            <li>Immune System</li>
-            <li>Add new stress symptom</li>
-        </ul>
     </div>
 
     <label for="lifestyle_condition">Lifestyle Condition</label>
-    <div class="selection">
+    <div class="selection" data-type="lifestyle">
         <div class="selected_item"></div>
-        <ul name="lifestyle_condition" class="options">
-            <li>I didn't eat well</li>
-            <li>I'm tired</li>
-            <li>I'm lonely</li>
-            <li>I need to exercise</li>
-            <li>I'm over weight</li>
-            <li>I'm still smoking</li>
-            <li>I drank too much alcohol</li>
-            <li>I ate too much</li>
-            <li>I drank too much coffee</li>
-            <li>Add new lifestyle condition</li>
-        </ul>
     </div>
 
     <label for="people">Number of People Around</label>
     <div id="people_slider"></div>
     <div class="selection" data-type="people">
         <div class="selected_item"></div>
-        <ul name="people" class="options">
-            <li data-count="0">No one</li>
-            <li data-count="1">1</li>
-            <li data-count="2-5">2-5</li>
-            <li data-count="6-10">6-10</li>
-            <li data-count="11+">11 or more</li>
-        </ul>
     </div>
 
     <label for="mood">Mood</label>
     <div class="multiple_choice_selection" data-type="mood">
         <div class="selected_item"></div>
-        <ul name="mood" class="multiple_choice">
-            <li data-mood="angry">Angry</li>
-            <li data-mood="bored">Bored</li>
-            <li data-mood="calm">Calm</li>
-            <li data-mood="confident">Confident</li>
-            <li data-mood="confused">Confused</li>
-            <li data-mood="cool">Cool</li>
-            <li data-mood="depressed">Depressed</li>
-            <li data-mood="elated">Elated</li>
-            <li data-mood="embarrassed">Embarrassed</li>
-            <li data-mood="evil">Evil</li>
-            <li data-mood="flirt">Flirt</li>
-            <li data-mood="forgetful">Forgetful</li>
-            <li data-mood="frustrated">Frustrated</li>
-            <li data-mood="happy">Happy</li>
-            <li data-mood="hungry">Hungry</li>
-            <li data-mood="impatient">Impatient</li>
-            <li data-mood="insecure">Insecure</li>
-            <li data-mood="irrated">Irrated</li>
-            <li data-mood="jealous">Jealous</li>
-            <li data-mood="lonely">Lonely</li>
-            <li data-mood="nervous">Nervous</li>
-            <li data-mood="sad">Sad</li>
-            <li data-mood="scared">Scared</li>
-            <li data-mood="shy">Shy</li>
-            <li data-mood="tired">Tired</li>
-            <li>Add New mood</li>
-        </ul>
     </div>
 
     <label>Message</label>
